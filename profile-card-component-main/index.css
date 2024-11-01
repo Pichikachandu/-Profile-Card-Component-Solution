@@ -1,0 +1,108 @@
+:root { 
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+    --shadow: hsla(0, 0%, 31%, 0.61);
+}
+
+* {
+    margin: 0; 
+    padding:0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+} 
+
+body {
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-size: cover;
+    background-position: -50vw -80vh, 50vw 50vh;
+    background-repeat: no-repeat;
+    background-color: var(--Dark-cyan); 
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.125rem;
+    min-height: 100vh;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    /* -moz-text-size-adjust: none; */
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-image: url(./images/bg-pattern-card.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+    max-width: fit-content;
+    display: grid;
+    justify-content: center;
+    align-items: center;    
+    border-radius: 3%;
+    box-shadow: 0 10px 40px var(--shadow);
+}
+
+.perso-info {
+    display: grid;
+    gap: 1rem;
+}
+
+.perso-info p {
+    font-size: smaller;
+    font-weight: 500;
+}
+
+img {
+    margin-top: 5rem;
+    place-self: center;
+}
+
+.stats {
+    padding: 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats p {
+    font-size: small;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+article {
+    display: block;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border: solid 5px white;
+    border-radius: 50%;
+}
+
+h3 {
+    overflow-wrap: break-word;
+    font-weight: 700;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+p, span {
+    overflow-wrap: break-word;
+    font-weight: 400;
+    color: var(--Dark-gray);
+}
+
+hr {
+    margin-top: 1.5rem;
+    border: none;
+    height: 2px;
+    background-color: var(--Dark-gray);
+    opacity: 15%;   
+}
